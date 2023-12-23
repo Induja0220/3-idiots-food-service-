@@ -1,0 +1,162 @@
+/* Reset some default styles */
+body, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0; /* Subtle background color */
+    font-family: 'Monaco';
+    display: flex;
+    flex-direction: column; /* Set the main axis to be vertical */
+    font-size: 20px;
+    
+}
+
+.meow {
+    height: 120px; /* Increased height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 120px; /* Maintain aspect ratio */
+    margin-top: 0px;
+    align-items: center;
+}
+
+.add {
+    height: 30px; /* Increased height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 120px; /* Maintain aspect ratio */
+    margin-top: 0px;
+    background-color: white;
+}
+
+p {
+    text-align: center;
+    margin-top: 16px; /* Add some margin above the text */
+    font-size: 24px;
+    font-weight: bold; /* Make the font bold */
+    color: #000; /* Black text color */
+}
+
+.buttv,
+.butt,
+.buttr {
+    color: aliceblue;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    margin: 10px 0; /* Adjust margin for better spacing */
+    font-size: 30px;
+    width: 100%; /* Cover the entire screen width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px;
+}
+
+.buttv {
+    background-color: black;
+    height: 120px; /* Increased height */
+}
+
+.butt {
+    background-color: rgb(47, 255, 85);
+    height: 50px; /* Increased height */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.buttr {
+    background-color: red;
+    height: 90px; /* Increased height */
+}
+
+/* Updated styles for responsive product container */
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+.decrement-btn,
+.increment-btn {
+    cursor: pointer;
+    height: 50px; /* Set the height to match the butt buttons */
+    width:50px;
+    background-color: white;
+    color: black;
+    font-weight: 600px;
+    font-size: 40px;
+    border-radius: 20px;
+    padding: 0px;
+}
+
+.quantity-display {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #333;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-list li {
+    margin-right: 20px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        z-index: 1;
+    }
+
+    .menu-list.show {
+        display: flex;
+    }
+
+    .menu-list li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

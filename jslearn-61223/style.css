@@ -1,0 +1,71 @@
+/* Common Styles for both mobile and desktop */
+.cart {
+    display: flex;
+    flex-direction:column;
+    max-width: 80%; /* Use a percentage for a responsive max-width */
+    margin: 10px auto; /* Center the cart on the page */
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.meow {
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.butt {
+    color: aliceblue;
+    background-color:rgb(47, 255, 85);
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    width: 100%; /* Take the full width of the container */
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+.buttr {
+    color: aliceblue;
+    background-color:red;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    width: 100%; /* Take the full width of the container */
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+.buttv{
+    color: aliceblue;
+    background-color:black;
+    height: 40px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    width: 100%; /* Take the full width of the container */
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+.label {
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    margin: 10px 0; /* Adjust margin for better spacing */
+    width: 100%; /* Take the full width of the container */
+}
+
+body {
+    background-color: rgba(0, 232, 255, 0.932);
+    margin: 0; /* Remove default margin */
+}
+
+/* Media Query for screens larger than 768px (Desktop) */
+@media (min-width: 768px) {
+    .cart {
+        flex-direction: row;
+        align-items: center; /* Center items horizontally in row direction */
+        margin: 20px auto; /* Adjust margin for better spacing */
+    }
+
+    .meow {
+        margin-right: 20px; /* Add space between the image and other elements */
+    }
+}

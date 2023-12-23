@@ -1,0 +1,79 @@
+<!-- view_products.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Products</title>
+    <style>
+        /* Add any styles for your table here */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Products</h2>
+    <table id="products-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
+    <script type="module">
+        // Initialize Firebase app
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+        const appSettings = {
+            databaseURL: "https://shop-cart-f9f92-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        };
+        const app = initializeApp(appSettings);
+        const database = getDatabase(app);
+        const shoppingListInDB = ref(database, "shoplist");
+
+        // Function to render the products table
+        function renderProductsTable(data) {
+            const tableBody = document.querySelector("#products-table tbody");
+            tableBody.innerHTML = ""; // Clear existing rows
+
+            for (const key in data) {
+                const item = data[key];
+                const row = `<tr>
+                                <td>${item.item}</td>
+                                <td>${item.quantity}</td>
+                            </tr>`;
+                tableBody.innerHTML += row;
+            }
+        }
+
+        // Fetch data from Firebase and render the table
+        onValue(shoppingListInDB, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                renderProductsTable(data);
+            }
+        });
+    </script>
+</body>
+</html>
