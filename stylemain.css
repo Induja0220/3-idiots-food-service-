@@ -4,6 +4,13 @@ body {
     margin: 0;
     padding: 0;
 }
+.meow {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+}
 
 /* Mobile styles */
 @media only screen and (max-width: 767px) {
@@ -15,6 +22,13 @@ body {
         display: flex;
         justify-content: space-between; /* Adjusted for the hamburger menu */
     }
+    .meow {
+        width: 50px; /* Adjust the width as needed */
+        height: auto; /* Maintain the aspect ratio */
+        position: absolute;
+        top: 10px; /* Adjust the top position as needed */
+        left: 10px; /* Adjust the left position as needed */
+    }
 
     .menu-list {
         display: none;
@@ -23,6 +37,7 @@ body {
     .menu-icon {
         font-size: 20px;
         cursor: pointer;
+        display: flex;
     }
 
     .product-container {
@@ -46,33 +61,11 @@ body {
         cursor: pointer;
     }
 
-    .buttv {
+    .buttv,
+    .butt,
+    .buttr {
         flex: 1;
         text-align: center;
-        background-color: #000; /* Updated color for buttv */
-        color: white;
-        font-weight: bold;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        margin: 0 5px;
-    }
-    .butt{
-        flex: 1;
-        text-align: center;
-        background-color:#4CAF50; /* Updated color for buttv */
-        color: white;
-        font-weight: bold;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        margin: 0 5px;
-    }
-     .buttr {
-        flex: 1;
-        text-align: center;
-        background-color:#f44336; /* Updated color for buttv */
-        color: white;
         font-weight: bold;
         padding: 10px;
         border: none;
@@ -80,8 +73,19 @@ body {
         margin: 0 5px;
     }
 
+    .buttv {
+        background-color:  #4CAF50; /* Updated color for buttv */
+        color: white;
+    }
+
+    .butt {
+        background-color: black; /* Updated color for butt */
+        color: white;
+    }
+
     .buttr {
-        background-color: #f44336; /* Different color for buttr */
+        background-color: #f44336; /* Updated color for buttr */
+        color: white;
     }
 }
 
@@ -90,7 +94,7 @@ body {
     .butt {
         flex: 1;
         text-align: center;
-        background-color: #000; /* Updated color for buttv */
+        background-color: #000; /* Updated color for butt */
         color: white;
         font-weight: bold;
         padding: 10px;
@@ -155,7 +159,8 @@ body {
         cursor: pointer;
     }
 
-    .buttv {
+    .buttv,
+    .buttr {
         flex: 1;
         background-color: #4CAF50;
         color: white;
