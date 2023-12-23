@@ -14,49 +14,7 @@ body {
 
 /* Mobile styles */
 @media only screen and (max-width: 767px) {
-    /*#############################################*/
-    .butt {
-        /* Adjusted size for mobile view */
-        flex: 1;
-        text-align: center;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        padding: 15px; /* Increased padding for better visibility */
-        border: none;
-        border-radius: 5px;
-        margin: 0 5px;
-    }
-
-    .product-container {
-        /* Added a fixed height for the container */
-        height: 300px; /* Adjust the height as needed */
-        overflow-y: auto; /* Enable vertical scrolling */
-        position: relative; /* Added position relative for absolute positioning of buttons */
-    }
-
-    .decrement-btn,
-    .increment-btn {
-        font-weight: bold;
-        font-size: 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        position: absolute;
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Center vertically */
-    }
-
-    .decrement-btn {
-        left: 5px; /* Adjusted left position for decrement button */
-    }
-
-    .increment-btn {
-        right: 5px; /* Adjusted right position for increment button */
-    }
-/*#############################################*/
+    
     .navbar {
         background-color: #333;
         padding: 10px;
@@ -83,7 +41,7 @@ body {
         display: flex;
     }
 
-    /*.product-container {
+    .product-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -102,9 +60,10 @@ body {
         border: none;
         border-radius: 50%;
         cursor: pointer;
-    }*/
+    }
 
     .buttv,
+    .butt,
     .buttr {
         flex: 1;
         text-align: center;
@@ -120,10 +79,10 @@ body {
         color: white;
     }
 
-   .butt {
+    .butt {
         background-color: black; /* Updated color for butt */
         color: white;
-   }
+    }
 
     .buttr {
         background-color: #f44336; /* Updated color for buttr */
