@@ -1,130 +1,96 @@
-/* Reset some default styles */
-body, p {
+/* General styling for both mobile and desktop views */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Set your desired background color */
 }
 
-body {
-    background-color: #f0f0f0; /* Subtle background color */
-    font-family: 'Monaco';
-    display: flex;
-    flex-direction: column; /* Set the main axis to be vertical */
-    font-size: 20px;
-}
-
-/* Updated styles for header image and text */
-.meow {
-    height: 120px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-top: 0px;
-    align-self: center; /* Center the image */
-}
-
-.add {
-    height: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-top: 0px;
-    background-color: white;
-    text-align: center;
-    font-weight: bold;
-    color: #000; /* Black text color */
-}
-
-/* Updated styles for menu icon and list */
+/* Navbar styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
+    background-color: #333; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
     padding: 10px;
-    background-color: #3498db; /* Light blue color */
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .menu-icon {
-    font-size: 30px;
-    color: #000; /* Black text color */
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .menu-list {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
-    display: flex;
+    display: none;
+}
+
+.menu-list.show {
+    display: block;
 }
 
 .menu-list li {
+    display: inline-block;
     margin-right: 20px;
 }
 
 .menu-list a {
     text-decoration: none;
-    color: #000; /* Black text color */
+    color: #fff; /* Set your desired text color */
 }
 
-/* Updated styles for product buttons */
+/* Button styling */
+.buttr, .butt, .buttv {
+    background-color: #4CAF50; /* Set your desired background color */
+    color: #000; /* Set your desired text color */
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Product container styling */
 .product-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 10px 0;
-}
-
-.butt {
-    background-color: #3498db; /* Light blue color */
-    height: 120px; /* Increased height */
-    width: 45%; /* Adjust button width for better display on small screens */
-    margin: 10px 0; /* Adjust margin for better spacing */
-}
-
-.buttr {
-    background-color: #e74c3c; /* Red color */
-    height: 120px; /* Increased height */
-    width: 45%; /* Adjust button width for better display on small screens */
-    margin: 10px 0; /* Adjust margin for better spacing */
-}
-
-/* Updated styles for quantity display */
-.quantity-display {
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Set your desired background color */
+    margin: 5px;
+    padding: 10px;
 }
 
-/* Add media query for small screens */
+/* Increment and Decrement button styling */
+.decrement-btn, .increment-btn {
+    background-color: #4CAF50; /* Set your desired background color */
+    color: #000; /* Set your desired text color */
+    border: none;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Styling for mobile view */
 @media only screen and (max-width: 600px) {
-    .menu-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #3498db; /* Light blue color */
-        z-index: 1;
-    }
-
-    .menu-list.show {
-        display: flex;
-    }
-
-    .menu-list li {
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
+    /* Adjustments for mobile view */
     .product-container {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
+}
 
-    .butt,
-    .buttr {
-        width: 100%;
+/* Styling for desktop view */
+@media only screen and (min-width: 601px) {
+    /* Adjustments for desktop view */
+    .product-container {
+        max-width: 600px;
+        margin: 5px auto;
     }
 }
