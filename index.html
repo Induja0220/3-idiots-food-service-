@@ -1,0 +1,41 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-mobile.css" media="(max-width: 767px)">
+    <link rel="stylesheet" href="style-desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles that apply to all screen sizes can be kept here */
+    </style>
+</head>
+<body>
+    <div class="cart">
+        <img class="meow" src="cat.png" alt="Meow Image">
+        <input class="label" type="text" id="in-put" placeholder="Bread">
+        <input class="label" type="text" id="qy-put" placeholder="Quantity">
+        <button class="butt" id="add-put">ADD TO CART</button>
+        <input class="label" type="text" id="in-input" placeholder="Bread">
+        <input class="label" type="text" id="qy-input" placeholder="Quantity">
+        <button class="buttr" id="up-put">UPDATE QUANTITY</button>
+        <button class="buttv" id="view-products">VIEW PRODUCTS</button>
+        <ul id="shop-list"></ul>
+
+        <script src="java.js" type="module"></script>
+        <script src="javarem.js" type="module"></script>
+        <script src="update_quantity.js" type="module"></script>
+
+
+        <script>
+            // Add an event listener for the "VIEW PRODUCTS" button
+            document.getElementById("view-products").addEventListener("click", function () {
+                // Redirect to view_products.html when the button is clicked
+                window.location.href = "view_products.html";
+            });
+        </script>
+    </div>
+</body>
+</html>
