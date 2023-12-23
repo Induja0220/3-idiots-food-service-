@@ -160,3 +160,62 @@ body {
         display: block;
     }
 }
+ .product-container {
+            flex-direction: column; /* Stack buttons vertically on small screens */
+            margin: 10px 0; /* Adjust margin for better spacing */
+        }
+
+        .decrement-btn,
+        .increment-btn {
+            margin: 5px; /* Adjust margin for better spacing */
+        }
+
+        .navbar {
+            position: relative;
+        }
+
+        .menu-list {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: #333;
+            z-index: 1;
+            display: none;
+            flex-direction: column;
+        }
+
+        .menu-list.show {
+            display: flex;
+        }
+
+        .menu-list li {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        /* Add media query for small screens */
+        @media only screen and (max-width: 600px) {
+            .menu-list li {
+                margin: 0;
+            }
+
+            .menu-list.show {
+                display: flex;
+            }
+
+            .product-container {
+                flex-direction: row; /* Display buttons in a row on larger screens */
+                justify-content: space-between; /* Add space between buttons */
+            }
+
+            .butt {
+                width: 45%; /* Adjust button width for better display on small screens */
+            }
+        }
