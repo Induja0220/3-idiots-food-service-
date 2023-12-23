@@ -10,114 +10,39 @@ body {
     display: flex;
     flex-direction: column; /* Set the main axis to be vertical */
     font-size: 20px;
-    
 }
 
+/* Updated styles for header image and text */
 .meow {
-    height: 120px; /* Increased height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    width: 120px; /* Maintain aspect ratio */
+    height: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
     margin-top: 0px;
-    align-items: center;
+    align-self: center; /* Center the image */
 }
 
 .add {
-    height: 30px; /* Increased height */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    width: 120px; /* Maintain aspect ratio */
+    height: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
     margin-top: 0px;
     background-color: white;
-}
-
-p {
     text-align: center;
-    margin-top: 16px; /* Add some margin above the text */
-    font-size: 24px;
-    font-weight: bold; /* Make the font bold */
+    font-weight: bold;
     color: #000; /* Black text color */
 }
 
-.buttv,
-.butt,
-.buttr {
-    color: aliceblue;
-    border-radius: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: none;
-    margin: 10px 0; /* Adjust margin for better spacing */
-    font-size: 30px;
-    width: 100%; /* Cover the entire screen width */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    padding: 10px;
-}
-
-.buttv {
-    background-color: black;
-    height: 120px; /* Increased height */
-}
-
-.butt {
-    background-color: rgb(47, 255, 85);
-    height: 50px; /* Increased height */
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.buttr {
-    background-color: red;
-    height: 90px; /* Increased height */
-}
-
-/* Updated styles for responsive product container */
-.product-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0; /* Adjust margin for better spacing */
-}
-
-.decrement-btn,
-.increment-btn {
-    cursor: pointer;
-    height: 50px; /* Set the height to match the butt buttons */
-    width:50px;
-    background-color: white;
-    color: black;
-    font-weight: 600px;
-    font-size: 40px;
-    border-radius: 20px;
-    padding: 0px;
-}
-
-.quantity-display {
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-
-
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* Updated styles for menu icon and list */
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 10px;
-    background-color: #333;
+    background-color: #3498db; /* Light blue color */
 }
 
 .menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 20px;
-    color: #fff;
+    font-size: 30px;
+    color: #000; /* Black text color */
 }
 
 .menu-list {
@@ -133,9 +58,41 @@ body {
 
 .menu-list a {
     text-decoration: none;
-    color: #fff;
+    color: #000; /* Black text color */
 }
 
+/* Updated styles for product buttons */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.butt {
+    background-color: #3498db; /* Light blue color */
+    height: 120px; /* Increased height */
+    width: 45%; /* Adjust button width for better display on small screens */
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+.buttr {
+    background-color: #e74c3c; /* Red color */
+    height: 120px; /* Increased height */
+    width: 45%; /* Adjust button width for better display on small screens */
+    margin: 10px 0; /* Adjust margin for better spacing */
+}
+
+/* Updated styles for quantity display */
+.quantity-display {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Add media query for small screens */
 @media only screen and (max-width: 600px) {
     .menu-list {
         display: none;
@@ -143,7 +100,7 @@ body {
         position: absolute;
         top: 60px;
         right: 10px;
-        background-color: #333;
+        background-color: #3498db; /* Light blue color */
         z-index: 1;
     }
 
@@ -154,68 +111,20 @@ body {
     .menu-list li {
         margin: 0;
         padding: 10px;
+        text-align: center;
     }
 
     .menu-icon {
         display: block;
     }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .butt,
+    .buttr {
+        width: 100%;
+    }
 }
- .product-container {
-            flex-direction: column; /* Stack buttons vertically on small screens */
-            margin: 10px 0; /* Adjust margin for better spacing */
-        }
-
-        .decrement-btn,
-        .increment-btn {
-            margin: 5px; /* Adjust margin for better spacing */
-        }
-
-        .navbar {
-            position: relative;
-        }
-
-        .menu-list {
-            position: absolute;
-            top: 60px;
-            right: 10px;
-            background-color: #333;
-            z-index: 1;
-            display: none;
-            flex-direction: column;
-        }
-
-        .menu-list.show {
-            display: flex;
-        }
-
-        .menu-list li {
-            padding: 10px;
-            text-align: center;
-        }
-
-        .menu-icon {
-            display: block;
-            cursor: pointer;
-            font-size: 20px;
-            color: #fff;
-        }
-
-        /* Add media query for small screens */
-        @media only screen and (max-width: 600px) {
-            .menu-list li {
-                margin: 0;
-            }
-
-            .menu-list.show {
-                display: flex;
-            }
-
-            .product-container {
-                flex-direction: row; /* Display buttons in a row on larger screens */
-                justify-content: space-between; /* Add space between buttons */
-            }
-
-            .butt {
-                width: 45%; /* Adjust button width for better display on small screens */
-            }
-        }
