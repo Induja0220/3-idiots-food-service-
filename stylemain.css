@@ -3,6 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    touch-action: manipulation; /* Disable zooming on double-tap for mobile devices */
+
 }
 
 .meow {
