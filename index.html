@@ -4,18 +4,44 @@
         <link rel="stylesheet" href="stylemain.css">
 
     </head>
+    <style>
+        /* Add this style for the menu when it has the "show" class */
+        .menu-list.show {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Adjust the top position based on your design */
+            left: 0;
+            background-color: #333;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Add this style for each menu item */
+        .menu-list.show li {
+            padding: 10px;
+            margin: 0;
+            list-style: none;
+            font-size: 20px;
+        }
+        .menu-list.show li a {
+        color: white;
+        text-decoration: none;
+    }
+    </style>
     <body>
-       <!-- <img class="meow" src="org3i.png" alt="Meow Image">-->
+        <img class="meow" src="org3i.png" alt="Meow Image"><br>
 
         <p class="add">3-IDIOTS</p>
         <div class="navbar">
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <ul class="menu-list">
                 <li><a href="order.html">Orders</a></li>
-                <li><a href="main
-                        .html">Add to Cart</a></li>
+                <li><a href="main.html">Add to Cart</a></li>
             </ul>
         </div>
+        <br>
 
 
         <button class="buttr" id="view-products">DRINKS</button>
