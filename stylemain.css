@@ -14,7 +14,7 @@ body {
 }
 
 /* Mobile styles */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
     .navbar {
         background-color: #333;
         padding: 10px;
@@ -53,6 +53,7 @@ body {
         border: none;
         border-radius: 50%;
         cursor: pointer;
+        height: 100px;
     }
 
     .buttv,
@@ -70,11 +71,15 @@ body {
     .buttv {
         background-color: #4CAF50;
         color: white;
+        height:90px;
+        width:100px;
     }
 
     .butt {
         background-color: black;
         color: white;
+        height:100px;
+        width:50px;
     }
 
     .buttr {
@@ -133,10 +138,10 @@ body {
         border: none;
         border-radius: 50%;
         cursor: pointer;
+        width:50px;
     }
 
     .buttv,
-    .butt,
     .buttr {
         flex: 1;
         background-color: #4CAF50;
@@ -147,10 +152,25 @@ body {
         border-radius: 5px;
         margin: 0 5px;
         text-align: center;
+        height:50px;
+        width:70px;
+        align-items: center;
     }
-
+    .butt
+    {
+        flex: 1;
+        background-color:black;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin: 0 5px;
+        text-align: center;
+    }
     .butt {
-        height: 20px;
+        height: 100px;
+        background-color: black;
     }
 
     .buttr {
