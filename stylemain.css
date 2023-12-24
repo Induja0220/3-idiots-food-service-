@@ -47,13 +47,14 @@ body {
     .decrement-btn,
     .increment-btn {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 24px;
         background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 50%;
         cursor: pointer;
         height: 100px;
+        width:70px;
     }
 
     .buttv,
@@ -80,11 +81,18 @@ body {
         color: white;
         height:100px;
         width:50px;
+        font-size: 40px;
     }
 
     .buttr {
         background-color: #f44336;
         color: white;
+    }
+    .quantity-display {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -132,13 +140,14 @@ body {
     .decrement-btn,
     .increment-btn {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 24px;
         background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        width:50px;
+        width:70px;
+        height:100px;
     }
 
     .buttv,
@@ -167,12 +176,18 @@ body {
         border-radius: 5px;
         margin: 0 5px;
         text-align: center;
+        font-size: 40px;
     }
     .butt {
         height: 100px;
         background-color: black;
     }
-
+    .quantity-display {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .buttr {
         background-color: #f44336;
     }
