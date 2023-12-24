@@ -4,31 +4,24 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .meow {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
+    width: 50px;
+    height: auto;
     position: absolute;
-    top: 10px; /* Adjust the top position as needed */
-    left: 10px; /* Adjust the left position as needed */
+    top: 10px;
+    left: 10px;
 }
 
 /* Mobile styles */
-@media only screen and (min-width: 767px) {
-    
+@media only screen and (max-width: 767px) {
     .navbar {
         background-color: #333;
         padding: 10px;
         color: white;
         text-align: center;
         display: flex;
-        justify-content: space-between; /* Adjusted for the hamburger menu */
-    }
-    .meow {
-        width: 50px; /* Adjust the width as needed */
-        height: auto; /* Maintain the aspect ratio */
-        position: absolute;
-        top: 10px; /* Adjust the top position as needed */
-        left: 10px; /* Adjust the left position as needed */
+        justify-content: space-between;
     }
 
     .menu-list {
@@ -42,13 +35,13 @@ body {
     }
 
     .product-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px;
         margin: 5px 0;
         border: 1px solid #ddd;
         border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .decrement-btn,
@@ -75,40 +68,23 @@ body {
     }
 
     .buttv {
-        background-color:  #4CAF50; /* Updated color for buttv */
+        background-color: #4CAF50;
         color: white;
     }
 
     .butt {
-        background-color: black; /* Updated color for butt */
+        background-color: black;
         color: white;
     }
 
     .buttr {
-        background-color: #f44336; /* Updated color for buttr */
+        background-color: #f44336;
         color: white;
     }
 }
 
 /* Desktop styles */
 @media only screen and (min-width: 768px) {
-    .butt {
-        flex: 1;
-        text-align: center;
-        background-color: #000; /* Updated color for butt */
-        color: white;
-        font-weight: bold;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        margin: 0 5px;
-        height: 20px;
-    }
-
-    .buttr {
-        background-color: #f44336; /* Different color for buttr */
-    }
-
     body {
         background-color: #f2f2f2;
     }
@@ -119,12 +95,10 @@ body {
         color: white;
         text-align: center;
         display: flex;
-        justify-content: space-between; /* Adjusted for the hamburger menu */
+        justify-content: space-between;
     }
 
     .menu-icon {
-        font-size: 20px;
-        cursor: pointer;
         display: none;
     }
 
@@ -140,14 +114,14 @@ body {
     }
 
     .product-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px;
         margin: 10px 20px;
         border: 1px solid #ddd;
         border-radius: 5px;
         background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .decrement-btn,
@@ -162,6 +136,7 @@ body {
     }
 
     .buttv,
+    .butt,
     .buttr {
         flex: 1;
         background-color: #4CAF50;
@@ -172,5 +147,13 @@ body {
         border-radius: 5px;
         margin: 0 5px;
         text-align: center;
+    }
+
+    .butt {
+        height: 20px;
+    }
+
+    .buttr {
+        background-color: #f44336;
     }
 }
